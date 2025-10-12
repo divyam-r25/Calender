@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+     <div class="app-container">
+        <main class="main-content">
+            <div class="calendar-container">
+                <header class="calendar-header">
+                    <div class="current-date-info">
+                        <h1 class="current-date-text" id="currentDateText">Oct 10, Fri</h1>
+                        <div class="year-dropdown">
+                            <div class="current-year" id="currentYear">2025</div>
+                            <div class="year-dropdown-content" id="yearDropdown">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-controls">
+                        <button class="control-btn" id="prevMonth">‹</button>
+                        <div class="dropdown">
+                            <h2 class="month-year-display" id="monthYearDisplay">October 2025</h2>
+                            <div class="dropdown-content" id="monthDropdown">
+                                <button class="dropdown-item" data-month="0">January</button>
+                                <button class="dropdown-item" data-month="1">February</button>
+                                <button class="dropdown-item" data-month="2">March</button>
+                                <button class="dropdown-item" data-month="3">April</button>
+                                <button class="dropdown-item" data-month="4">May</button>
+                                <button class="dropdown-item" data-month="5">June</button>
+                                <button class="dropdown-item" data-month="6">July</button>
+                                <button class="dropdown-item" data-month="7">August</button>
+                                <button class="dropdown-item" data-month="8">September</button>
+                                <button class="dropdown-item" data-month="9">October</button>
+                                <button class="dropdown-item" data-month="10">November</button>
+                                <button class="dropdown-item" data-month="11">December</button>
+                            </div>
+                        </div>
+                        <button class="control-btn" id="nextMonth">›</button>
+                    </div>
+                </header>
+
+                <div class="calendar-grid">
+                    <div class="days-header">
+                        <div class="day-header">SUN</div>
+                        <div class="day-header">MON</div>
+                        <div class="day-header">TUE</div>
+                        <div class="day-header">WED</div>
+                        <div class="day-header">THU</div>
+                        <div class="day-header">FRI</div>
+                        <div class="day-header">SAT</div>
+                    </div>
+
+                    <div class="days-grid" id="calendarDays">
+                       
+                    </div>
+                </div>
+
+                <button class="add-event-btn" id="addEventBtn">+ Add Event</button>
+            </div>
+        </main>
+
+    </div>
+
+=
+    <div class="modal hidden" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Event</h3>
+                <button class="modal-close" id="closeModal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label class="form-label" for="eventTitle">Event Title</label>
+                        <input type="text" id="eventTitle" class="form-control" placeholder="Enter event title" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="eventTime">Time</label>
+                        <input type="time" id="eventTime" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="eventType">Type</label>
+                        <select id="eventType" class="form-control">
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="celebration">Celebration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn--secondary" id="cancelEvent">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="modal hidden" id="viewEventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Events for <span id="viewEventDate"></span></h3>
+                <button class="modal-close" id="closeViewModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="eventsList"></div>
+                <button class="btn btn--primary btn--full-width" id="addEventToDate">+ Add New Event</button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+    
+</body>
+</html>
