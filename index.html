@@ -1,4 +1,14 @@
- <div class="app-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="app-container">
         <main class="main-content">
             <div class="calendar-container">
                 <header class="calendar-header">
@@ -7,7 +17,7 @@
                         <div class="year-dropdown">
                             <div class="current-year" id="currentYear">2025</div>
                             <div class="year-dropdown-content" id="yearDropdown">
-                                <!-- Years will be populated by JavaScript -->
+                             
                             </div>
                         </div>
                     </div>
@@ -46,7 +56,7 @@
                     </div>
 
                     <div class="days-grid" id="calendarDays">
-                        <!-- Calendar days will be populated by JavaScript -->
+                
                     </div>
                 </div>
 
@@ -57,7 +67,6 @@
         <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
     </div>
 
-    <!-- Event Modal -->
     <div class="modal hidden" id="eventModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -92,7 +101,7 @@
         </div>
     </div>
 
-    <!-- View Event Modal -->
+
     <div class="modal hidden" id="viewEventModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -105,3 +114,7 @@
             </div>
         </div>
     </div>
+ <script src="script.js"></script>
+    
+</body>
+</html>
